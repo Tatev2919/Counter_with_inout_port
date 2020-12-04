@@ -11,7 +11,7 @@ wire [N-1:0] load;
 reg trig_r,st;
 
 assign out_or_load = we ? out: 4'bZ;
-assign load = !we ? out_or_load :load;
+assign load = !we ? out_or_load :load;//maybe latch 
 assign out_pulse = (out == load);
   
 always @(posedge clk or posedge rst)
