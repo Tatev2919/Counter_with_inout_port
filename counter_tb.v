@@ -11,7 +11,6 @@ module counter_tb;
     end
     
     assign out_or_load = !we ? load: 4'bZ;
-    assign out = out_or_load;
   
     counter #(4) c1 (
       .clk(clk),
